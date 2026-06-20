@@ -24,7 +24,7 @@ export function ClusterSelector({ onInvestigate, loading }: ClusterSelectorProps
       setClusters(data.clusters);
       
       // Select the active context by default
-      const active = data.clusters.find(c => c.is_active);
+      const active = data.clusters.find((c: any) => c.is_active);
       if (active) {
         setSelectedCluster(active.name);
       } else if (data.clusters.length > 0) {
