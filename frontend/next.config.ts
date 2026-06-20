@@ -1,15 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  typescript: {
-    ignoreBuildErrors: true,   // <-- this is key
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  output: 'standalone',
-  env: {
-    NEXT_PUBLIC_BACKEND_URL: process.env.NEXT_PUBLIC_BACKEND_URL,
-  },
+  output: 'export',  // <-- this creates an 'out' folder
+  typescript: { ignoreBuildErrors: true },
+  eslint: { ignoreDuringBuilds: true },
 }
-
 module.exports = nextConfig
